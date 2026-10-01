@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["tests", "scripts", "src/lib/game.ts", "src/lib/hltb.ts"]
+  "include": ["tests", "scripts", "src/lib/game.ts", "src/lib/hltb.ts", "src/lib/steam.ts"]
 }

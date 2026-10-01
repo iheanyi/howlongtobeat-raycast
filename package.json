@@ -34,6 +34,27 @@
       "title": "Current Game",
       "description": "Track your current game and log playtime",
       "mode": "view"
+    },
+    {
+      "name": "steam-library",
+      "title": "Steam Library",
+      "description": "Browse installed Steam games and look up their completion times",
+      "mode": "view"
+    },
+    {
+      "name": "focused-steam-game",
+      "title": "Look up Focused Steam Game",
+      "description": "Match the frontmost app to an installed Steam game and search HowLongToBeat",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "steamPath",
+      "title": "Steam Installation Folder",
+      "description": "Leave blank to detect Steam automatically. For a custom installation, choose the Steam folder containing steamapps.",
+      "type": "directory",
+      "required": false
     }
   ],
   "scripts": {
@@ -50,7 +71,8 @@
     "typecheck": "tsc --noEmit && tsc -p tsconfig.tests.json --noEmit",
     "format": "prettier --write src web scripts tests vite.config.ts eslint.config.js package.json tsconfig*.json index.html README.md",
     "test": "tsx --test tests/*.test.ts",
-    "test:live": "tsx scripts/check-live.ts"
+    "test:live": "tsx scripts/check-live.ts",
+    "test:steam": "tsx scripts/check-steam.ts"
   },
   "dependencies": {
     "@raycast/api": "2.6.0",

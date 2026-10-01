@@ -5,8 +5,10 @@ import { formatHours, Game } from "./lib/game";
 import { hltb } from "./lib/hltb";
 import { useLibrary } from "./lib/storage";
 
-export default function SearchGames(props: LaunchProps<{ arguments: { query?: string } }>) {
-  const [query, setQuery] = useState(props.arguments?.query ?? "");
+export default function SearchGames(
+  props: LaunchProps<{ arguments: { query?: string }; launchContext: { query?: string } }>,
+) {
+  const [query, setQuery] = useState(props.launchContext?.query ?? props.arguments?.query ?? "");
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>();
