@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-raycast/
+.npm-cache/
+.research/
+.hltb-home.html
+*.log
+.DS_Store
+raycast-env.d.ts
+output/

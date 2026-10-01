@@ -1,0 +1,73 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "howlongtobeat",
+  "type": "module",
+  "title": "HowLongToBeat",
+  "description": "Find your next game, see completion times, and keep your current adventure close.",
+  "icon": "extension-icon.png",
+  "author": "iheanyi",
+  "license": "MIT",
+  "categories": [
+    "Fun"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "commands": [
+    {
+      "name": "search-games",
+      "title": "Search Games",
+      "description": "Search HowLongToBeat and save games to your backlog",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "query",
+          "type": "text",
+          "placeholder": "Game title",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "current-game",
+      "title": "Current Game",
+      "description": "Track your current game and log playtime",
+      "mode": "view"
+    }
+  ],
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist -o dist-raycast",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "browser:dev": "vite --host 127.0.0.1",
+    "browser:build": "tsc -p tsconfig.browser.json --noEmit && vite build",
+    "browser:preview": "vite preview --host 127.0.0.1",
+    "preview": "npm run browser:preview",
+    "ray:dev": "ray develop",
+    "ray:build": "ray build -e dist -o dist-raycast",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.tests.json --noEmit",
+    "format": "prettier --write src web scripts tests vite.config.ts eslint.config.js package.json tsconfig*.json index.html README.md",
+    "test": "tsx --test tests/*.test.ts",
+    "test:live": "tsx scripts/check-live.ts"
+  },
+  "dependencies": {
+    "@raycast/api": "2.6.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}
