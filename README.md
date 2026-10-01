@@ -7,7 +7,7 @@ Find your next adventure, see how much time it needs, and keep your current game
 - **Search Games:** Live HowLongToBeat search in a full-width list with cover icons and Main Story times. Press Enter for a spacious detail view with Main Story / Main + Extras / Completionist estimates. Switch the dropdown to your library, backlog, current game, or completed games.
 - **Current Game:** Pin a game, log your total hours, choose your play style, and see estimated time remaining. Switching games preserves the old game's progress in your backlog.
 - **Steam Library:** Browse games installed through Steam on this computer, with cover art. Press Enter to search HowLongToBeat for a selected title, then choose the matching game or edition.
-- **Look up Focused Steam Game:** Use Raycast's frontmost application API to match an executable to an installed Steam game and open search. If there is no match, the Steam picker opens instead.
+- **Look up Focused Steam Game (experimental):** Try Raycast's frontmost application API to match an executable to an installed Steam game and open search. Detection is currently unreliable on Windows; use the Steam picker for dependable selection. If there is no match, the picker opens instead.
 - Save games, mark them complete, copy completion times, or open the original HowLongToBeat page from the action menu.
 
 Your saved HowLongToBeat library contains games you choose yourself and is stored on your device in Raycast LocalStorage. The separate Steam picker reads local installation metadata; it does not need an API key, Steam account setup, or a HowLongToBeat account. The browser preview keeps its own separate library.

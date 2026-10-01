@@ -44,7 +44,7 @@
     {
       "name": "focused-steam-game",
       "title": "Look up Focused Steam Game",
-      "description": "Match the frontmost app to an installed Steam game and search HowLongToBeat",
+      "description": "Experimental frontmost-app lookup with a manual Steam picker fallback",
       "mode": "no-view"
     }
   ],
